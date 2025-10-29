@@ -10,12 +10,12 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./preview.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/rradiohysteria/profile-card-component)
+- Live Site URL: [GitHub Pages](https://rradiohysteria.github.io/profile-card-component/)
 
 ## My process
 
@@ -23,6 +23,6 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 - Semantic HTML5 markup
 - CSS custom properties
+- SCSS
 - Flexbox
-- CSS Grid
 - Mobile-first workflow

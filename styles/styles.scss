@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
 
 @mixin flex-center {
     display: flex;
@@ -9,6 +10,17 @@
 @mixin flex-column {
     display: flex;
     flex-direction: column;
+}
+
+@mixin text-1{
+    font-size: 1.125rem;
+    letter-spacing: 0;
+}
+
+@mixin text-2 {
+    font-size: 0.875rem;
+    letter-spacing: 0;
+    font-weight: 400;
 }
 
 * {
@@ -24,6 +36,8 @@ body {
     background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
     background-position: right 40vw bottom 50vh, left 40vw top 50vh;
     background-repeat: no-repeat;
+    font-family: "Kumbh Sans", sans-serif;
+    line-height: 1.25;
 }
 
 main {
@@ -31,7 +45,6 @@ main {
 }
 
 article {
-    width: 90%;
     @include flex-column;
     position: relative;
     
@@ -44,7 +57,8 @@ article {
         overflow: hidden;
         position: absolute;
         top: 20%;
-        transform: translateX(100%);
+        left: 50%;
+        transform: translateX(-50%);
 
         img {
             border-radius: 50%;
@@ -57,4 +71,52 @@ article {
     background: $white;
     padding-top: 15%;
     text-align: center;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.details {
+    div {
+        display: flex;
+        justify-content: center;
+        gap: $spacing-100;
+
+        p {
+            @include text-1;
+            font-weight: 400;
+            color: $gray-500;
+        }
+        
+        h1 {
+            @include text-1;
+            font-weight: 700;
+            color: $navy-950;
+            margin-bottom: $spacing-100;
+        }
+    }
+    p {
+        @include text-2;
+        color: $gray-500;
+    }
+    padding-bottom: $spacing-300;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: $spacing-300 $spacing-200;
+    border-top: 1px solid $gray-100;
+
+    .stat-value {
+        @include text-1;
+        font-weight: 700;
+        color: $navy-950;
+        margin-bottom: $spacing-100;
+    }
+
+    .stat-desc {
+        color: $gray-500;
+        font-size: 0.625rem;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+    }
 }
