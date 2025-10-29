@@ -1,0 +1,60 @@
+@use 'variables' as *;
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $blue-600;
+    min-height: 100vh;
+    @include flex-center;
+    background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+    background-position: right 40vw bottom 50vh, left 40vw top 50vh;
+    background-repeat: no-repeat;
+}
+
+main {
+    @include flex-center;
+}
+
+article {
+    width: 90%;
+    @include flex-column;
+    position: relative;
+    
+    .profile-bg {
+        border-radius: 1rem 1rem 0 0;
+        width: 100%;
+    }
+
+    .profile-icon {
+        overflow: hidden;
+        position: absolute;
+        top: 20%;
+        transform: translateX(100%);
+
+        img {
+            border-radius: 50%;
+            border: 5px solid $white;
+        }
+    }
+}
+
+.profile-info {
+    background: $white;
+    padding-top: 15%;
+    text-align: center;
+}
